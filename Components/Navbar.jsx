@@ -1,6 +1,6 @@
 "use client";
 /*import React from "react";*/
-import React, { useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { FaBars } from "react-icons/fa";
@@ -8,6 +8,10 @@ import { FaBars } from "react-icons/fa";
 const Navbar = () => {
     const router = useRouter();
     const [open, setOpen] = useState(false);
+
+    const handleNavClick = () => {
+        setOpen(false)
+    }
 
     return (
         <div id="navbar" className="flex items-center justify-between  px-6 py-3 bg-black shadow-md text-white">
@@ -21,14 +25,58 @@ const Navbar = () => {
           </div>
 
 {/* Desktop Menu  */}
-            <ul className="flex items-center gap-15 text-m">
-                <li className="cursor-pointer hover:text-blue-500">Home</li>
-                <li className="cursor-pointer hover:text-blue-500">About</li>
-                <li className="cursor-pointer hover:text-blue-500">Services</li>
-                <li className="cursor-pointer hover:text-blue-500">Portfolio</li>
-                <li className="cursor-pointer hover:text-blue-500">Blogs</li>
-                <li className="cursor-pointer hover:text-blue-500">Contact</li>
-            </ul>
+            <div  className="hidden font-sans md:flex gap-10 text-m font-medium pr-8">
+                <a 
+                    href="#home"
+                    className="cursor-pointer hover:text-custom-hover"
+                    onClick={handleNavClick}
+                 > 
+                 Home
+                </a>   
+                 <a 
+                    href="#home"
+                    className="cursor-pointer hover:text-custom-hover"
+                    onClick={handleNavClick}
+                 > 
+                 About
+                </a> 
+                 <a 
+                    href="#home"
+                    className="cursor-pointer hover:text-custom-hover"
+                    onClick={handleNavClick}
+                 > 
+                 Services
+                </a>   
+                 <a 
+                    href="#home"
+                    className="cursor-pointer hover:text-custom-hover"
+                    onClick={handleNavClick}
+                 > 
+                 Portolio
+                </a> 
+                 <a 
+                    href="#home"
+                    className="cursor-pointer hover:text-custom-hover"
+                    onClick={handleNavClick}
+                 > 
+                 Blogs
+                </a>  
+                 <a 
+                    href="#home"
+                    className="cursor-pointer hover:text-custom-hover"
+                    onClick={handleNavClick}
+                 > 
+                 Contact
+                </a>        
+            </div>
+            {/* <ul className="hidden font-sans md:flex gap-10 text-m font-medium pr-8">
+                <li className="cursor-pointer hover:text-custom-hover">Home</li>
+                <li className="cursor-pointer hover:text-custom-hover">About</li>
+                <li className="cursor-pointer hover:text-custom-hover">Services</li>
+                <li className="cursor-pointer hover:text-custom-hover">Portfolio</li>
+                <li className="cursor-pointer hover:text-custom-hover">Blogs</li>
+                <li className="cursor-pointer hover:text-custom-hover">Contact</li>
+            </ul> */}
 
 {/* Mobile Menu Button  */}
 
@@ -40,15 +88,59 @@ const Navbar = () => {
                 {/* Add the button logo */}
             </button>
 {/* Mobile Menu  */}
-            {open && (
-                <ul className="absolute top-16 left-0 w-full bg-black flex flex-col items-center gap-4 py-4 md:hidden">
-                    <li className="cursor-pointer hover:text-blue-500">Home</li>
-                    <li className="cursor-pointer hover:text-blue-500">About</li>
-                    <li className="cursor-pointer hover:text-blue-500">Services</li>
-                    <li className="cursor-pointer hover:text-blue-500">Portfolio</li>
-                    <li className="cursor-pointer hover:text-blue-500">Blogs</li>
-                    <li className="cursor-pointer hover:text-blue-500">Contact</li>
-                    </ul>
+            {open && ( 
+                <div  className="absolute top-16 left-0 w-full bg-black flex flex-col items-center gap-4 py-4 md:hidden">
+                <a 
+                    href="#home"
+                    className="cursor-pointer hover:text-custom-hover"
+                    onClick={handleNavClick}
+                 > 
+                 Home
+                </a>   
+                 <a 
+                    href="#home"
+                    className="cursor-pointer hover:text-custom-hover"
+                    onClick={handleNavClick}
+                 > 
+                 About
+                </a> 
+                 <a 
+                    href="#home"
+                    className="cursor-pointer hover:text-custom-hover"
+                    onClick={handleNavClick}
+                 > 
+                 Services
+                </a>   
+                 <a 
+                    href="#home"
+                    className="cursor-pointer hover:text-custom-hover"
+                    onClick={handleNavClick}
+                 > 
+                 Portolio
+                </a> 
+                 <a 
+                    href="#home"
+                    className="cursor-pointer hover:text-custom-hover"
+                    onClick={handleNavClick}
+                 > 
+                 Blogs
+                </a>  
+                 <a 
+                    href="#home"
+                    className="cursor-pointer hover:text-custom-hover"
+                    onClick={handleNavClick}
+                 > 
+                 Contact
+                </a>        
+            </div>
+                // <ul className="absolute top-16 left-0 w-full bg-black flex flex-col items-center gap-4 py-4 md:hidden">
+                //     <li className="cursor-pointer hover:text-blue-500">Home</li>
+                //     <li className="cursor-pointer hover:text-blue-500">About</li>
+                //     <li className="cursor-pointer hover:text-blue-500">Services</li>
+                //     <li className="cursor-pointer hover:text-blue-500">Portfolio</li>
+                //     <li className="cursor-pointer hover:text-blue-500">Blogs</li>
+                //     <li className="cursor-pointer hover:text-blue-500">Contact</li>
+                //     </ul>
             )} 
             
         </div>
