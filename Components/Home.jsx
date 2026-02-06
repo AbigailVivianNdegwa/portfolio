@@ -24,7 +24,7 @@ export default function Home(){
                 <p className="font-bold text-lg md:text-xl mt-4 text-[var(--text-color)]">
                     <b>Welcome to my Portfolio!</b>
                 </p>
-                <div className="mt-6 text-base md:text-xl">
+                <div className="mt-6 text-base md:text-l/7">
                     <p className="text-[var(--text-color)]">
                         Here, you'll find a showcase of my projects, skills, and passion for
                         creating effective solutions. From web applications, SEO Optimization
@@ -82,6 +82,7 @@ export default function Home(){
 
                     </a>
                 </div>
+                
                 <a
                     href="/Images/Abigail Ndegwa - CV.pdf"
                     download
@@ -90,8 +91,10 @@ export default function Home(){
                     Download CV
 
                 </a>
+            
+               
             </div>
-            <div className="hidden lg:flex flex-1 justify-end">
+            <div className="hidden lg:flex flex-1 justify-end pr-10">
                 <img
                 src="/Images/Image1.jpg"
                 alt="home-img"

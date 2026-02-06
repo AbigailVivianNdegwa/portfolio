@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { motion, useScroll } from "motion/react"
+
 import { FaBars } from "react-icons/fa";
 
 const Navbar = () => {
@@ -12,6 +14,9 @@ const Navbar = () => {
     const handleNavClick = () => {
         setOpen(false)
     }
+
+    const {scrollProgress} = useScroll()
+
 
     return (
         <div id="navbar" className="flex items-center justify-between  px-6 py-3 bg-black shadow-md text-white">
@@ -81,7 +86,7 @@ const Navbar = () => {
 {/* Mobile Menu Button  */}
 
             <button
-                className="md:hidden text-2xl"
+                className="md:hidden text-2xl pt-5"
                 onClick={() => setOpen(!open)}
             >
                 <FaBars />
@@ -89,7 +94,7 @@ const Navbar = () => {
             </button>
 {/* Mobile Menu  */}
             {open && ( 
-                <div  className="absolute top-16 left-0 w-full bg-black flex flex-col items-center gap-4 py-4 md:hidden">
+                <div  className=" font-sans absolute top-16 left-0 w-full bg-black flex flex-col text-left pl-6 gap-4 py-4 md:hidden ">
                 <a 
                     href="#home"
                     className="cursor-pointer hover:text-custom-hover"
