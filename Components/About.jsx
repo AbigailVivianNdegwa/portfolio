@@ -112,24 +112,22 @@ export default function About(){
     }
     return(
         <section
-            className="flex flex-col lg:flex-row justify-center items-start gap-8 bg-[var(--snd-bg-color)] pt-0 px-5 md:px-20 py-20"
+            className="flex flex-col justify-center bg-[var(--snd-bg-color)] px-2 md:px-5 py-5"
             id="about"
         >
-            <div>
-                
-            </div>
-            <div className="w-full lg:w-[35%] flex-shrink-0 pt-15 md:pt-32">
+            <h2 className=" pt-5 text-4xl md:text-5xl font-bold text-center text-[var(--text-clor)] mb-8">
+                 ABOUT ME
+             </h2>
+
+            <div className="flex flex-col lg:flex-row justify-center items-start gap-10 bg-[var(--snd-bg-color)] pt-0 px-5 md:px-20 py-20">
+                 <div className="w-full  lg:w-[35%] flex-shrink-0 pt-2 md:pt-10 pr-0">
                 <img
                     src="/Images/Image2.jpg"
                     alt="about image"
                     className="w-full max-w-[400px] rounded-[15px]"
                 />
             </div>
-            <div className=" pt-15 flex-1 w-full lg:w-[60%]">
-                <h2 className="text-4xl md:text-5xl font-bold text-center text-[var(--text-clor)] mb-8">
-                    ABOUT ME
-                </h2>
-
+            <div className=" pt-5 flex-1 w-full lg:w-[60%]">
                 <p className="text-base md:text-base font-bold text-[var(--text-color)] my-6 leading-relaxed">
                     Hi, I'm Abigail Vivian Muthoni Ndegwa, a passionate student software
                     developer, cloud enthusiast, co-founder of the Be Audacious tech
@@ -199,6 +197,9 @@ export default function About(){
                 </div>
             </div>
 
+            </div>
+            
+            
         </section>
     )
 }
