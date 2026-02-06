@@ -130,7 +130,7 @@ export default function About(){
                     ABOUT ME
                 </h2>
 
-                <p className="text-base md:text-lg font-bold text-[var(--text-color)] my-6 leading-relaxed">
+                <p className="text-base md:text-base font-bold text-[var(--text-color)] my-6 leading-relaxed">
                     Hi, I'm Abigail Vivian Muthoni Ndegwa, a passionate student software
                     developer, cloud enthusiast, co-founder of the Be Audacious tech
                     community and community lead at Ajira AWS Re/Start Community. 
