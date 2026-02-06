@@ -1,3 +1,5 @@
+"use client";
+
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -82,16 +84,17 @@ export default function Home(){
 
                     </a>
                 </div>
-                
-                <a
-                    href="/Images/Abigail Ndegwa - CV.pdf"
-                    download
-                    className="inline-block px-7 py-4 bg-[var(--main-color)] rounded-full shadow-lg font-semibold text-base md:text-xl text-[var(--bg-color)] tracking-wide hover:shadow-none transition"
-                > 
-                    Download CV
+                <div className="pr-0 pb-10">
+                    <a
+                        href="/Images/Abigail Ndegwa - CV.pdf"
+                        download
+                        className="inline-block px-7 py-4 bg-[var(--main-color)] rounded-full shadow-lg font-semibold text-base md:text-xl text-[var(--bg-color)] tracking-wide hover:shadow-none transition"
+                    > 
+                        Download CV
 
-                </a>
-            
+                     </a>
+
+                </div>    
                
             </div>
             <div className="hidden lg:flex flex-1 justify-end pr-10">
