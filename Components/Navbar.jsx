@@ -39,35 +39,35 @@ const Navbar = () => {
                  Home
                 </a>   
                  <a 
-                    href="#home"
+                    href="#about"
                     className="cursor-pointer hover:text-custom-hover"
                     onClick={handleNavClick}
                  > 
                  About
                 </a> 
                  <a 
-                    href="#home"
+                    href="#services"
                     className="cursor-pointer hover:text-custom-hover"
                     onClick={handleNavClick}
                  > 
                  Services
                 </a>   
                  <a 
-                    href="#home"
+                    href="#portfolio"
                     className="cursor-pointer hover:text-custom-hover"
                     onClick={handleNavClick}
                  > 
                  Portolio
                 </a> 
                  <a 
-                    href="#home"
+                    href="#blogs"
                     className="cursor-pointer hover:text-custom-hover"
                     onClick={handleNavClick}
                  > 
                  Blogs
                 </a>  
                  <a 
-                    href="#home"
+                    href="#contact"
                     className="cursor-pointer hover:text-custom-hover"
                     onClick={handleNavClick}
                  > 

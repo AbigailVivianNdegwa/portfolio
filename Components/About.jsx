@@ -1,6 +1,7 @@
 "use client";
 
 import {useState} from 'react'
+import SliderImages from '@/Components/SliderImages';
 
 export default function About(){
     const [activeTab, setActiveTab] = useState('skills')
@@ -120,7 +121,7 @@ export default function About(){
              </h2>
 
             <div className="flex flex-col lg:flex-row justify-center items-start gap-10 bg-[var(--snd-bg-color)] pt-0 px-5 md:px-20 py-20">
-                 <div className="w-full  lg:w-[35%] flex-shrink-0 pt-2 md:pt-10 pr-0">
+                 <div className="w-full md:place-items-center lg:w-[35%] flex-shrink-0 pt-2 md:pt-10 pr-0">
                 <img
                     src="/Images/Image2.jpg"
                     alt="about image"
@@ -198,6 +199,8 @@ export default function About(){
             </div>
 
             </div>
+        
+        <SliderImages/>
             
             
         </section>
