@@ -167,7 +167,7 @@ export default function About(){
 
                 <div className="mt-8">
                     {tabs[activeTab] && (
-                        <ul className="space-y-4">
+                        <ul className="space-y-2">
                         {tabs[activeTab].map((item, idx) => (
                             <li key={idx} className="text-base font-mono md:text-base">
                             {item.title ? (

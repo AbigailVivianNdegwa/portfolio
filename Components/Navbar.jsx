@@ -19,7 +19,7 @@ const Navbar = () => {
 
 
     return (
-        <div id="navbar" className="flex items-center justify-between  px-6 py-3 bg-black shadow-md text-white">
+        <div className="flex items-center justify-between  px-6 py-3 bg-black shadow-md text-white">
           <div className="flex items-center"> 
             <Image 
                 src="/Images/Logo.png"
@@ -57,7 +57,7 @@ const Navbar = () => {
                     className="cursor-pointer hover:text-custom-hover"
                     onClick={handleNavClick}
                  > 
-                 Portolio
+                 Portfolio
                 </a> 
                  <a 
                     href="#blogs"

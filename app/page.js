@@ -2,6 +2,7 @@
 import Home from '@/Components/Home';
 import About from '@/Components/About';
 import Services from '@/Components/Services';
+import Portfolio from '@/Components/Portfolio';
 
 
 export default function Page() {
@@ -10,6 +11,8 @@ export default function Page() {
       <Home/>
       <About/>
       <Services/>
+      <Portfolio/>
+
     </div>
   )
 }
