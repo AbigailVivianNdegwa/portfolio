@@ -10,7 +10,7 @@ export default function About(){
         skills:[
             {
                 title: 'Software Development',
-                description: 'Application development, networking, database management, machine learning and artificial intelligence'
+                description: 'Application development, networking, database management, data science, machine learning and artificial intelligence'
             },
             {
                 title: 'UI/UX', 
