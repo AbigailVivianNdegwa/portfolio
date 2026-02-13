@@ -3,6 +3,8 @@ import Home from '@/Components/Home';
 import About from '@/Components/About';
 import Services from '@/Components/Services';
 import Portfolio from '@/Components/Portfolio';
+import Contact from '@/Components/Contact';
+
 
 
 export default function Page() {
@@ -12,6 +14,7 @@ export default function Page() {
       <About/>
       <Services/>
       <Portfolio/>
+      <Contact/>
 
     </div>
   )

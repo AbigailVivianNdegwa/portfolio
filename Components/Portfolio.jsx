@@ -9,17 +9,17 @@ export default function Portfolio(){
 
     const works = [
         {
-            image: '/Images/Placeholder.jpg',
+            image: '/Images/Placeholder1.png',
             title: 'Kejani Rental Management System',
             description:'Kejani was created to solve the problems apartment owners and tenants face.',
         },
         {
-            image: '/Images/Placeholder.jpg',
+            image: '/Images/Placeholder2.png',
             title: 'SmartThreads Textile Application',
             description:'SmartThreads is a website created for a texile business',
         },
         {
-            image: '/Images/Placeholder.jpg',
+            image: '/Images/Placeholder3.png',
             title: 'Procare Patient Management System',
             description:'Procare is an application designed to automate the patient scheduling process in the hospital',
         },
