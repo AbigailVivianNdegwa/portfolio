@@ -15,7 +15,7 @@ export default function SliderImages(){
 
 return(
     <div className="w-full overflow-hidden py-10">
-         <motion.div 
+        <motion.div 
             className='flex gap-10'
             animate={{
                 x: ['0%', '-50%'],

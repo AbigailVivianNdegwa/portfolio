@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -98,14 +99,25 @@ export default function Home(){
                
             </div>
             <div className="hidden lg:flex flex-1 justify-end pr-10">
-                <img
-                src="/Images/Image1.jpg"
-                alt="home-img"
-                className="w-[30vw] rounded-full m-8 object-cover animate-bounce"
-                style={{
-                    animation: 'floatImage 4s ease-in-out infinite',
-                }}
-                />
+                <motion.div
+                    animate={{ y: [0, 20, 0] }} // Keyframes: start, down, back to start
+                    transition={{
+                        duration: 2,          // Time for one full cycle
+                        repeat: Infinity,     // Loop forever
+                        ease: "easeInOut"     // Smooth start and end
+                    }}
+                >
+                    <img
+                        src="/Images/Image1.jpg"
+                        alt="home-img"
+                        className="w-[30vw] rounded-full m-8 object-cover animate-bounce"
+                        style={{
+                            animation: 'floatImage 4s ease-in-out infinite',
+                        }}
+                    />
+
+                </motion.div>
+                
             </div>
            
 
