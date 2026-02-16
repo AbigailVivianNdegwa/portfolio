@@ -19,61 +19,62 @@ const Navbar = () => {
 
 
     return (
-        <div className="fixed top-0 left-0 right-0 z-50 flex items-center gap-300  px-6 py-3 bg-black shadow-md text-white">
-          <div className="flex items-center"> 
+        <div className="fixed top-0 left-0 w-full z-50 bg-black shadow-md text-white">
+          <div className="flex items-center justify-between px-6 py-3">
+
             <Image 
                 src="/Images/Logo.png"
                 width={140}
                 height={140}
                 alt="Logo Image"
             />
-          </div>
 
-{/* Desktop Menu  */}
-            <div  className="hidden font-sans md:flex gap-10 text-m font-medium pr-8">
-                <a 
-                    href="#home"
-                    className="cursor-pointer hover:text-custom-hover"
-                    onClick={handleNavClick}
-                 > 
-                 Home
-                </a>   
-                 <a 
-                    href="#about"
-                    className="cursor-pointer hover:text-custom-hover"
-                    onClick={handleNavClick}
-                 > 
-                 About
-                </a> 
-                 <a 
-                    href="#services"
-                    className="cursor-pointer hover:text-custom-hover"
-                    onClick={handleNavClick}
-                 > 
-                 Services
-                </a>   
-                 <a 
-                    href="#portfolio"
-                    className="cursor-pointer hover:text-custom-hover"
-                    onClick={handleNavClick}
-                 > 
-                 Portfolio
-                </a> 
-                 <a 
-                    href="#blogs"
-                    className="cursor-pointer hover:text-custom-hover"
-                    onClick={handleNavClick}
-                 > 
-                 Blogs
-                </a>  
-                 <a 
-                    href="#contact"
-                    className="cursor-pointer hover:text-custom-hover"
-                    onClick={handleNavClick}
-                 > 
-                 Contact
-                </a>        
-            </div>
+            {/* Desktop Menu  */}
+                 <div  className="hidden font-sans md:flex gap-10 text-m font-medium pr-8">
+                    <a 
+                        href="#home"
+                        className="cursor-pointer hover:text-custom-hover"
+                        onClick={handleNavClick}
+                    > 
+                    Home
+                    </a>   
+                    <a 
+                        href="#about"
+                        className="cursor-pointer hover:text-custom-hover"
+                        onClick={handleNavClick}
+                    > 
+                    About
+                    </a> 
+                    <a 
+                        href="#services"
+                        className="cursor-pointer hover:text-custom-hover"
+                        onClick={handleNavClick}
+                    > 
+                    Services
+                    </a>   
+                    <a 
+                        href="#portfolio"
+                        className="cursor-pointer hover:text-custom-hover"
+                        onClick={handleNavClick}
+                    > 
+                    Portfolio
+                    </a> 
+                    <a 
+                        href="#blogs"
+                        className="cursor-pointer hover:text-custom-hover"
+                        onClick={handleNavClick}
+                    > 
+                    Blogs
+                    </a>  
+                    <a 
+                        href="#contact"
+                        className="cursor-pointer hover:text-custom-hover"
+                        onClick={handleNavClick}
+                    > 
+                    Contact
+                    </a>        
+                </div>
+          
             {/* <ul className="hidden font-sans md:flex gap-10 text-m font-medium pr-8">
                 <li className="cursor-pointer hover:text-custom-hover">Home</li>
                 <li className="cursor-pointer hover:text-custom-hover">About</li>
@@ -92,6 +93,9 @@ const Navbar = () => {
                 <FaBars />
                 {/* Add the button logo */}
             </button>
+          </div>
+
+
 {/* Mobile Menu  */}
             {open && ( 
                 <div  className=" font-sans absolute top-16 left-0 w-full bg-black flex flex-col text-left pl-6 gap-4 py-4 md:hidden ">
