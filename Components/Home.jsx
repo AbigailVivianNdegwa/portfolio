@@ -102,7 +102,7 @@ export default function Home(){
                 <motion.div
                     animate={{ y: [0, 20, 0] }} // Keyframes: start, down, back to start
                     transition={{
-                        duration: 30,          // Time for one full cycle
+                        duration: 2,          // Time for one full cycle
                         repeat: Infinity,     // Loop forever
                         ease: "easeInOut"     // Smooth start and end
                     }}
