@@ -9,6 +9,26 @@ import { FaDiscord } from "react-icons/fa";
 import { FaDev } from "react-icons/fa";
 
 export default function Contact(){
+    const handleSubmit = async (event) => {
+        event.preventDefault ();
+        const formData = new FormData (event.target);
+        const data = Object.fromEntries(formData);
+
+        try{
+            const response = await fetch('/api/contact', {
+                 method: 'POST',
+                headers: { 'Content-Type': 'application/json'},
+                body: JSON.stringify(data),
+            });
+            if (response.ok){
+                alert('Email sent successfully!');
+            } else{
+                alert('Failed to send email.');
+            }
+        } catch (error){
+            console.error('Error:', error);
+        }
+    };
     
 
     return(
@@ -25,7 +45,7 @@ export default function Contact(){
                         <div className="space-y-6">
                             <p className=" flex gap-5 text-lg md:text-xl font-bold text-[var(--text-color)]">
                                <FaPaperPlane />
-                                ndegwaviv254@gmail.com
+                                abbyvivian254@gmail.com
                             </p>
                             <p className="flex gap-5 text-lg md:text-xl font-bold text-[var(--text-color)]">
                                 <FaPhone />
@@ -33,13 +53,13 @@ export default function Contact(){
                             </p>
                         </div>
                         <div className=" pt-10 flex-1">
-                            <form
+                            <form onSubmit={handleSubmit}
                                 className="space-y-4 mb-8"
                                 id="contact-form"
                             >
                                 <input
                                     type="text"
-                                    name="Name"
+                                    name="name"
                                     placeholder="Enter your name"
                                     required
                                     className="w-full border-0 outline-none bg-[var(--snd-bg-color)] px-4 py-4 text-[var(--text-color)] text-lg rounded-[6px]"
@@ -52,7 +72,7 @@ export default function Contact(){
                                     className="w-full border-0 outline-none bg-[var(--snd-bg-color)] px-4 py-4 text-[var(--text-color)] text-lg rounded-[6px]"
                                 />
                                 <textarea
-                                    name="Message"
+                                    name="message"
                                     rows="6"
                                     placeholder="Add your message"
                                     className="w-full border-0 outline-none bg-[var(--snd-bg-color)] px-4 py-4 text-[var(--text-color)] text-lg rounded-[6px] resize-none"

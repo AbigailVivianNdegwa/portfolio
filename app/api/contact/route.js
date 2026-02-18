@@ -1,34 +1,44 @@
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 
-export default async function handler(req, res){
-    if (req.method === 'POST') {
-        const {name, email, message } = req.body;
+export async function POST(request) {
+  try {
+    const { name, email, message } = await request.json();
 
-        const transporter = nodemailer.createTransport({
-            host: 'smtp.gmail.com',
-            port: 587,
-            auth:  {
-                user: process.env.GMAIL_USERNAME,
-                pass: process.env.GMAIL_PASSWORD,
-            },
-        });
-
-        try {
-            await transporter.sendMail({
-                from: process.env.GMAIL_USERNAME,
-                to: 'recipient@example.com',
-                subject: 'New message from ${name}',
-                text: message,
-                replyTo: email,
-            });
-
-            res.status(200).json({message: 'Email sent successfully'});
-        } catch (error){
-            console.error(error);
-            res.status(500).json ({message: 'Failed to send email.'});
-        }
-    }else {
-        res.status(405).json ({message: 'Only POST requests allowed'});
+    if (!name || !email || !message) {
+      return Response.json(
+        { message: "All fields are required" },
+        { status: 400 }
+      );
     }
 
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
+      auth: {
+        user: process.env.GMAIL_USERNAME,
+        pass: process.env.GMAIL_PASSWORD,
+      },
+    });
+
+    await transporter.sendMail({
+      from: process.env.GMAIL_USERNAME,
+      to: process.env.GMAIL_USERNAME,
+      subject: `New message from ${name}`,
+      text: message,
+      replyTo: email,
+    });
+
+    return Response.json(
+      { message: "Email sent successfully" },
+      { status: 200 }
+    );
+
+  } catch (error) {
+    console.error(error);
+    return Response.json(
+      { message: "Failed to send email" },
+      { status: 500 }
+    );
+  }
 }
