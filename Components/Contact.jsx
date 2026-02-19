@@ -7,8 +7,12 @@ import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaDiscord } from "react-icons/fa";
 import { FaDev } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 
 export default function Contact(){
+    const subject = encodeURIComponent("Portfolio Inquiry");
+    const body = encodeURIComponent("Hello Abigail,");
+
     const handleSubmit = async (event) => {
         event.preventDefault ();
         const formData = new FormData (event.target);
@@ -84,9 +88,16 @@ export default function Contact(){
                                     SUBMIT
                                 </button>
                             </form>
-                            <div className="flex flex-wrap gap-6 my-12">
+                            <div className=" grid grid-cols-3 md:flex lg:flex flex-wrap gap-6 my-12">
+                                 <a
+                                    href={`mailto:abbyvivian254@gmail.com?subject=${subject}&body=${body}`}
+                                    className="flex justify-center items-center w-16 h-16 border-2 border-[var(--main-color)] rounded-full text-2xl text-[var(--main-color)] hover:bg-[var(--main-color)] hover:text-[var(--snd-bg-color)] hover:shadow-lg transition"
+                                    style={{ boxShadow: '0 0 0 var(--main-color)' }}
+                                >
+                                    <SiGmail />
+                                </a>
                                 <a
-                                    href="www.linkedin.com/in/abigail-vivian-muthoni-ndegwa"
+                                    href="https://www.linkedin.com/in/abigail-vivian-muthoni-ndegwa/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex justify-center items-center w-16 h-16 border-2 border-[var(--main-color)] rounded-full text-2xl text-[var(--main-color)] hover:bg-[var(--main-color)] hover:text-[var(--snd-bg-color)] hover:shadow-lg transition"
